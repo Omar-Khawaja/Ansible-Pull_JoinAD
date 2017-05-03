@@ -4,6 +4,9 @@
 - name: Modify /etc/resolv.conf to point to DC
   template: src=resolv.conf.j2 dest=/etc/resolv.conf
 
+- name: Ensure resolv.conf is persistent (survives reboot)
+  template: src=ifcfg-eth0.j2 dest=/etc/sysconfig/network-scripts/ifcfg-eth0
+
 - name: Join CentOS 7 machine(s) to AD domain
   expect:
     command: realm join -U "{{ domain_admin }}"@"{{ domain }}" "{{ domain }}" 
