@@ -4,3 +4,5 @@ The secrets in this playbook are managed using Credstash. This playbook uses Ans
 
 For more information on Credstash in general, see the following link:
 https://blog.fugue.co/2015-04-21-aws-kms-secrets.html
+
+Please note that any node using this playbook must have an IAM role associated with it that allows reading from DynamoDB (Credstash uses this for storing credentials).
