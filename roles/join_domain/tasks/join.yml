@@ -1,8 +1,6 @@
 ---
 # Joins CentOS 7 machine(s) to AD domain
 
-# The timeout portion below is optional and defaults to 30
-
 - name: Modify /etc/resolv.conf to point to DC
   template: src=resolv.conf.j2 dest=/etc/resolv.conf
 
