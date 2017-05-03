@@ -1,0 +1,5 @@
+---
+# tasks file for join_domain
+
+- include: dependencies.yml
+- include: join.yml

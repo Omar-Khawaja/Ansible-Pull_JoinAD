@@ -1,0 +1,7 @@
+---
+# vars file for join_domain
+
+domain_admin: "{{ lookup('credstash', 'domain_admin', region='us-east-2') }}"
+domain: "{{ lookup('credstash', 'domain', region='us-east-2') }}"
+domain_admin_pw: "{{ lookup('credstash', 'domain_admin_pw', region='us-east-2') }}"
+dc_ip: "{{ lookup('credstash', 'dc_ip', region='us-east-2') }}"

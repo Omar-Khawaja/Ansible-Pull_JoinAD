@@ -1,0 +1,18 @@
+---
+# Installs dependencies to join AD domain
+
+- name: Install packages required to join Centos7/RHEL7 machines to AD domain
+  yum: name={{ item }} state=installed
+  with_items:
+    - realmd
+    - samba-common-tools
+    - sssd
+    - epel-release
+
+- name: Install python-pip
+  yum: name=python-pip state=installed
+
+- name: Using pip to install pexpect 4.2.1
+  pip:
+    name: pexpect
+    version: 4.2.1

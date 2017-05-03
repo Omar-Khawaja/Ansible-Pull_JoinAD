@@ -1,0 +1,8 @@
+---
+
+- name: Join CentOS 7 instances to an Active Directory Domain
+  hosts: localhost
+  user: root
+
+  roles:
+    - join_domain
